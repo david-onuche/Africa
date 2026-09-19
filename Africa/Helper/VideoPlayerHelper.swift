@@ -5,14 +5,15 @@
 //  Created by David Onuche on 19/09/2026.
 //
 
-import SwiftUI
+import Foundation
+import AVKit
 
-struct VideoPlayerHelper: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+var videoPlayer: AVPlayer?
+
+func playVideo(fileName: String, fileFormat: String) -> AVPlayer {
+    if Bundle.main.url(forResource: fileName, withExtension: fileFormat) != nil {
+        videoPlayer = AVPlayer(url: Bundle.main.url(forResource: fileName, withExtension: fileFormat)!)
+        videoPlayer?.play()
     }
-}
-
-#Preview {
-    VideoPlayerHelper()
+    return videoPlayer!
 }

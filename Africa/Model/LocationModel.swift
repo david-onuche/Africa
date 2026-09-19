@@ -5,14 +5,20 @@
 //  Created by David Onuche on 19/09/2026.
 //
 
-import SwiftUI
+import Foundation
+import MapKit
 
-struct LocationModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+struct NationalParkLocation: Codable, Identifiable {
+    var id: String
+    var name: String
+    var image: String
+    var latitude: Double
+    var longitude: Double
+    
+    
+    // Computed Property
+    var location: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
     }
-}
-
-#Preview {
-    LocationModel()
 }
