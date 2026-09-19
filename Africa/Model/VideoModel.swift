@@ -5,14 +5,16 @@
 //  Created by David Onuche on 19/09/2026.
 //
 
-import SwiftUI
+import Foundation
 
-struct VideoModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct Video: Codable, Identifiable {
+    let id: String
+    let name: String
+    let headline: String
+    
+    
+    // Computed Property
+    var thumbnail: String {
+        "video-\(id)"
     }
-}
-
-#Preview {
-    VideoModel()
 }
