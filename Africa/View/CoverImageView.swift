@@ -13,6 +13,8 @@ struct CoverImageView: View {
     }
 }
 
-#Preview {
-    CoverImageView()
+struct CoverImageView_Previews: PreviewProvider {
+    static var previews: some View {
+        CoverImageView()
+    }
 }
