@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  Africa
 //
-//  Created by David Onuche on 19/09/2026.
+//  Created by David Onuche on 16/09/2026.
 //
 
 import SwiftUI
@@ -13,7 +13,7 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Content")
         }
         .padding()
     }
