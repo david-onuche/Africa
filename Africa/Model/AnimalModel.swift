@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-struct AnimalModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    AnimalModel()
+struct Animal:  Codable, Identifiable {
+    let id: String
+    let name: String
+    let headline: String
+    let description: String
+    let link: String
+    let image: String
+    let gallery: [String]
+    let fact: [String]
 }
